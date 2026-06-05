@@ -1,13 +1,14 @@
+```html
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Yijia Ma</title>
+  <title>Yijia Ma | Data Scientist</title>
 
   <style>
     body {
       font-family: Arial, Helvetica, sans-serif;
-      max-width: 900px;
+      max-width: 950px;
       margin: 40px auto;
       padding: 0 20px;
       line-height: 1.6;
@@ -16,7 +17,7 @@
     }
 
     h1 {
-      font-size: 32px;
+      font-size: 34px;
       margin-bottom: 5px;
     }
 
@@ -39,7 +40,7 @@
     .top-section {
       display: flex;
       align-items: flex-start;
-      gap: 25px;
+      gap: 30px;
     }
 
     .profile-photo {
@@ -47,44 +48,61 @@
       border-radius: 8px;
     }
 
+    .subtitle {
+      font-size: 18px;
+      color: #444;
+      margin-top: 5px;
+    }
+
     .links {
-      margin-top: 10px;
+      margin-top: 15px;
       margin-bottom: 20px;
     }
 
     .links a {
       margin-right: 12px;
+      font-weight: bold;
     }
 
-    .news li {
-      margin-bottom: 6px;
+    .tagline {
+      font-size: 17px;
+      margin-top: 20px;
     }
 
-    .publication {
+    .highlight-box {
+      background-color: #f7f7f7;
+      border-left: 4px solid #0066cc;
+      padding: 15px 20px;
+      margin-top: 20px;
+    }
+
+    .project {
       margin-bottom: 25px;
     }
 
-    .publication-title {
+    .project-title {
       font-weight: bold;
       font-size: 17px;
     }
 
-    .publication-authors {
+    .project-tools {
+      color: #555;
+      font-size: 15px;
       margin-top: 3px;
     }
 
-    .publication-venue {
-      font-style: italic;
-      margin-top: 3px;
+    .publication {
+      margin-bottom: 18px;
     }
 
-    .publication-links {
-      margin-top: 3px;
+    .publication-title {
+      font-weight: bold;
     }
 
     .small-note {
       color: #666;
       font-size: 14px;
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -94,21 +112,23 @@
   <div class="top-section">
 
     <div>
-      <h1>Yijia Ma</h1>
-      <p>
-        <strong>Ph.D. in Statistics</strong><br>
-        Statistician | Data Scientist | Computational Neuroscience Researcher
-      </p>
+      <h1>Yijia Ma, Ph.D.</h1>
+
+      <div class="subtitle">
+        Data Scientist | Statistician | Machine Learning & Biomedical Data Analytics
+      </div>
 
       <p>
-        Email: grace.yijia.ma@gmail.com
+        Houston, TX · Open to Data Scientist, Senior Data Scientist, Statistician,
+        Quantitative Analyst, and Applied Scientist roles
       </p>
 
       <div class="links">
-        <a href="files/YijiaMa_Quant_Resume_2026.pdf">CV</a> |
-        <a href="https://scholar.google.com/citations?user=h1cmeZkAAAAJ">Google Scholar</a> |
+        <a href="files/YijiaMa_Quant_Resume_2026.pdf">Resume</a> |
+        <a href="files/Yijia_Ma_CV.pdf">Academic CV</a> |
         <a href="https://github.com/YMa2019">GitHub</a> |
-        <a href="https://www.linkedin.com/in/cecelia-ma/">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/cecelia-ma/">LinkedIn</a> |
+        <a href="https://scholar.google.com/citations?user=h1cmeZkAAAAJ">Google Scholar</a>
       </div>
     </div>
 
@@ -118,129 +138,159 @@
 
   </div>
 
+  <p class="tagline">
+    I am a statistician and data scientist with expertise in statistical modeling,
+    machine learning, high-dimensional data analysis, and biomedical/neuroscience data.
+    My work bridges rigorous statistical methodology with practical data science pipelines
+    for complex temporal, functional, and multimodal datasets.
+  </p>
+
+  <div class="highlight-box">
+    <strong>Core strengths:</strong>
+    Statistical modeling, machine learning, Bayesian modeling, functional data analysis,
+    time-series analysis, EEG/fMRI analytics, NLP, cross-validation, permutation testing,
+    uncertainty quantification, and reproducible Python/MATLAB/R workflows.
+  </div>
+
+  <h2>Professional Summary</h2>
   <p>
-    Hi, I am Yijia Ma. I received my Ph.D. in Statistics from Florida State University.
-    My research interests broadly lie in functional data analysis, Bayesian modeling,
-    stochastic processes, EEG/fMRI analysis, and computational neuroscience.
+    I have experience developing end-to-end analytical pipelines, including data cleaning,
+    feature engineering, statistical modeling, machine learning, model validation, and
+    interpretation of results for scientific and business stakeholders. My background combines
+    a Ph.D. in Statistics with applied experience in healthcare/neuroscience analytics and
+    industry data science.
   </p>
 
   <p>
-    My work focuses on developing and applying statistical methods for complex temporal,
-    functional, and high-dimensional biomedical data. I am particularly interested in
-    time-warping models, uncertainty quantification, neural decoding, and multimodal
-    neuroimaging analysis.
+    I am particularly interested in roles involving predictive modeling, high-dimensional data,
+    experimentation, causal or statistical inference, biomedical data science, customer analytics,
+    risk modeling, and quantitative research.
   </p>
 
-  <h2>News</h2>
-  <ul class="news">
-    <li>[2025] Our paper on alpha-frequency stimulation and default mode network connectivity was published in <em>eNeuro</em>.</li>
-    <li>[2025] Our Bayesian function registration paper was published in <em>Electronic Journal of Statistics</em>.</li>
-    <li>[2024] Our stochastic process framework for time-warping functions was published in <em>Computational Statistics and Data Analysis</em>.</li>
-    <li>[2024] I received my Ph.D. in Statistics from Florida State University.</li>
+  <h2>Technical Skills</h2>
+  <ul>
+    <li><strong>Programming:</strong> Python, R, MATLAB, SQL, SAS, SPSS</li>
+    <li><strong>Machine Learning:</strong> scikit-learn, PyTorch, TensorFlow, logistic regression, SVM, random forests, XGBoost, LightGBM, clustering, transformers</li>
+    <li><strong>Statistics:</strong> Bayesian modeling, mixed-effects models, GLM, functional data analysis, stochastic processes, uncertainty quantification, permutation testing</li>
+    <li><strong>Data Science:</strong> data cleaning, feature engineering, model validation, cross-validation, anomaly detection, NLP, topic modeling</li>
+    <li><strong>Biomedical/Neural Data:</strong> EEG/fMRI preprocessing, ICA, spectral analysis, connectivity analysis, ROI-level fMRI modeling</li>
+    <li><strong>Tools:</strong> Pandas, NumPy, SciPy, MNE, SPM, CONN, Tableau, AWS, Git</li>
   </ul>
 
-  <h2>Publications</h2>
+  <h2>Selected Projects</h2>
+
+  <div class="project">
+    <div class="project-title">
+      <a href="projects/eeg-fmri.html">EEG/fMRI Neural Decoding and Connectivity Analysis</a>
+    </div>
+    <div class="project-tools">
+      Python, MATLAB, MNE, SPM/CONN, scikit-learn, permutation testing
+    </div>
+    <p>
+      Built analytical pipelines for high-dimensional EEG/fMRI data, including preprocessing,
+      artifact correction, spectral feature extraction, ROI-level fMRI analysis, neural decoding,
+      cross-validation, and statistical validation.
+    </p>
+  </div>
+
+  <div class="project">
+    <div class="project-title">
+      <a href="projects/bayesian-registration.html">Bayesian Function Registration and Uncertainty Quantification</a>
+    </div>
+    <div class="project-tools">
+      Bayesian modeling, MCMC, stochastic processes, functional data analysis, MATLAB/R
+    </div>
+    <p>
+      Developed Bayesian models for aligning functional data under temporal variation,
+      enabling uncertainty quantification and robust modeling of nonlinear time-warping patterns.
+    </p>
+  </div>
+
+  <div class="project">
+    <div class="project-title">
+      <a href="projects/customer-service-nlp.html">Customer Service Call Reason Analysis</a>
+    </div>
+    <div class="project-tools">
+      Python, AWS, NLP, BERT, sentence transformers, GPT summarization, topic modeling
+    </div>
+    <p>
+      Analyzed long customer service calls by cleaning unstructured text data, identifying
+      overrepresented call reasons, and applying NLP methods to support operational insights.
+    </p>
+  </div>
+
+  <div class="project">
+    <div class="project-title">
+      <a href="projects/time-warping.html">Stochastic Process Modeling for Time-Warping Functions</a>
+    </div>
+    <div class="project-tools">
+      Functional data analysis, Gaussian processes, optimization, simulation studies
+    </div>
+    <p>
+      Created a statistical framework for representing nonlinear time-warping functions
+      in a linear space, supporting stochastic-process modeling, optimization, and outlier detection.
+    </p>
+  </div>
+
+  <h2>Selected Publications</h2>
 
   <div class="publication">
     <div class="publication-title">
       A New Framework for Bayesian Function Registration
     </div>
-    <div class="publication-authors">
-      Yijia Ma and collaborators
+    <div>
+      <em>Electronic Journal of Statistics</em>, 2025
     </div>
-    <div class="publication-venue">
-      Electronic Journal of Statistics, 2025
-    </div>
-    <div class="publication-links">
-      <a href="#">paper</a> |
-      <a href="#">code</a>
-    </div>
-    <p>
-      This work develops a Bayesian framework for function registration by placing
-      stochastic-process priors directly on time-warping functions, enabling posterior
-      inference and uncertainty quantification for phase variability.
-    </p>
   </div>
 
   <div class="publication">
     <div class="publication-title">
       A Stochastic Process Framework for Time Warping Functions
     </div>
-    <div class="publication-authors">
-      Yijia Ma and collaborators
+    <div>
+      <em>Computational Statistics and Data Analysis</em>, 2024
     </div>
-    <div class="publication-venue">
-      Computational Statistics and Data Analysis, 2024
-    </div>
-    <div class="publication-links">
-      <a href="#">paper</a> |
-      <a href="#">code</a>
-    </div>
-    <p>
-      This paper introduces a linear Hilbert-space representation for nonlinear
-      time-warping functions, supporting Gaussian-process modeling, penalized
-      registration, functional boxplots, and outlier detection.
-    </p>
   </div>
 
   <div class="publication">
     <div class="publication-title">
-      Alpha-Frequency Stimulation Enhances Synchronization of Alpha Oscillations
-      with Default Mode Network Connectivity
+      Alpha-Frequency Stimulation Enhances Synchronization of Alpha Oscillations with Default Mode Network Connectivity
     </div>
-    <div class="publication-authors">
-      Yijia Ma, J. Brown, and collaborators
+    <div>
+      <em>eNeuro</em>, 2025
     </div>
-    <div class="publication-venue">
-      eNeuro, 2025
-    </div>
-    <div class="publication-links">
-      <a href="#">paper</a>
-    </div>
-    <p>
-      This study uses simultaneous EEG-fMRI to examine how alpha-frequency stimulation
-      modulates alpha oscillations and default mode network connectivity.
-    </p>
   </div>
 
-  <h2>Research Interests</h2>
-  <ul>
-    <li>Functional data analysis and function registration</li>
-    <li>Bayesian modeling and uncertainty quantification</li>
-    <li>Stochastic processes and temporal point processes</li>
-    <li>EEG/fMRI analysis and neural decoding</li>
-    <li>Machine learning for high-dimensional biomedical data</li>
-  </ul>
-
-  <h2>Projects</h2>
+  <h2>Experience</h2>
   <ul>
     <li>
-      <a href="projects/eeg-fmri.html">EEG/fMRI Neural Decoding and Connectivity Analysis</a>
+      <strong>Postdoctoral Research Fellow / Senior Data Scientist</strong>,
+      UTHealth, Houston, TX
     </li>
     <li>
-      <a href="projects/bayesian-registration.html">Bayesian Function Registration and Uncertainty Quantification</a>
+      <strong>Data Scientist Intern</strong>,
+      Travelers
     </li>
     <li>
-      <a href="projects/time-warping.html">Stochastic Process Modeling for Time-Warping Functions</a>
-    </li>
-    <li>
-      <a href="projects/point-process.html">Temporal Point Process Modeling for Neural Spike Trains</a>
+      <strong>Ph.D. Researcher and Instructor</strong>,
+      Florida State University
     </li>
   </ul>
 
-  <h2>Professional Activity</h2>
+  <h2>Education</h2>
   <ul>
-    <li>Postdoctoral Research Fellow / Senior Data Scientist, UTHealth</li>
-    <li>Data Scientist Intern, Travelers</li>
-    <li>Instructor and Teaching Assistant, Florida State University</li>
-    <li>Reviewer for statistical and biomedical research venues</li>
+    <li>Ph.D. in Statistics, Florida State University</li>
+    <li>M.S. in Applied Mathematics and Statistics, Stony Brook University</li>
+    <li>B.S. in Actuarial Science and Risk Management</li>
   </ul>
 
-  <h2>Awards</h2>
-  <ul>
-    <li>Clara Kibler Davis Scholarship, Florida State University</li>
-    <li>Best First Year Student Award, Department of Statistics, Florida State University</li>
-  </ul>
+  <h2>Contact</h2>
+  <p>
+    Email: YOUR_EMAIL_HERE<br>
+    LinkedIn: <a href="YOUR_LINKEDIN_LINK">YOUR_LINKEDIN_LINK</a><br>
+    GitHub: <a href="https://github.com/YMa2019">https://github.com/YMa2019</a><br>
+    Google Scholar: <a href="YOUR_GOOGLE_SCHOLAR_LINK">YOUR_GOOGLE_SCHOLAR_LINK</a>
+  </p>
 
   <p class="small-note">
     Last updated: 2026
@@ -248,3 +298,4 @@
 
 </body>
 </html>
+```
