@@ -314,45 +314,57 @@
     </div>
   </div>
 
-  <div class="project">
-    <div class="project-title">
-      <a href="projects/eeg-fmri.html">EEG/fMRI Neural Decoding and Connectivity Analysis</a>
+  <div class="project-row">
+    <img src="images/EJS_bayes.png" alt="A new framework for Bayesian function registration figure" class="project-image">
+
+    <div class="project-content">
+      <div class="project-title">
+        <a href="https://projecteuclid.org/journals/electronic-journal-of-statistics/volume-19/issue-1/A-new-framework-for-Bayesian-function-registration/10.1214/25-EJS2383.pdf">Let EEG Models Learn EEG</a>
+      </div>
+
+      <p>
+        <strong>Yijia Ma</strong>, Wei Wu<br>
+        <em>Electronic Journal of Statistics, 2025</em>
+      </p>
+
+      <p>
+        This project develops principled constraints for EEG representation learning,
+        helping EEG models better capture signal structure and improve model generalization
+        for neural time-series analysis.
+      </p>
+
+      <div class="project-tools">
+        Bayesian Modeling, MCMC, stochastic process, functional data analysis, model constraints
+      </div>
+
+      <p class="project-links">
+        <a href="https://y-research-sbu.github.io/JET">webpage</a> |
+        <span class="abstract-link" onclick="toggleAbstract('eeg-abstract')">abstract</span> |
+        <a href="https://projecteuclid.org/journals/electronic-journal-of-statistics/volume-19/issue-1/A-new-framework-for-Bayesian-function-registration/10.1214/25-EJS2383.pdf">paper</a> |
+        <a href="https://github.com/YMa2019/multi-align">code</a>
+      </p>
+
+      <div id="eeg-abstract" class="abstract-box">
+        <strong>Abstract.</strong>
+          Function registration, also referred to as alignment, has been one of the fundamental problems in the field of functional data analysis. Classical registration methods
+          such as the Fisher-Rao alignment focus on estimating optimal time warping function between functions. In recent studies, a model on time warping has attracted more attention,
+          and it can be used as a prior term to combine with the classical method (as a likelihood
+          term) in a Bayesian framework. The Bayesian approaches have been shown improvement
+          over the classical methods. However, its prior model on time warping is often based on a
+          nonlinear approximation, which may introduce inaccuracy and inefficiency. To overcome
+          these problems, we propose a new Bayesian approach by adopting a prior which provides
+          a linear representation and various stochastic processes (Gaussian or non-Gaussian) can be
+          effectively utilized on time warping. No linearization approximation is needed in the time
+          warping computation, and the posterior can be obtained via a conventional Markov Chain
+          Monte Carlo approach. We thoroughly investigate the impact of the prior on the performance of functional registration with multiple simulation examples, which demonstrate the
+          superiority of the new framework over the previous methods. We finally utilize the new
+          method in a real dataset and obtain desirable alignment result.     
+      </div>
     </div>
-    <div class="project-tools">
-      Python, MATLAB, MNE, SPM/CONN, scikit-learn, permutation testing
-    </div>
-    <p>
-      Built analytical pipelines for high-dimensional EEG/fMRI data, including preprocessing,
-      artifact correction, spectral feature extraction, ROI-level fMRI analysis, neural decoding,
-      cross-validation, and statistical validation.
-    </p>
   </div>
 
-  <div class="project">
-    <div class="project-title">
-      <a href="projects/bayesian-registration.html">Bayesian Function Registration and Uncertainty Quantification</a>
-    </div>
-    <div class="project-tools">
-      Bayesian modeling, MCMC, stochastic processes, functional data analysis, MATLAB/R
-    </div>
-    <p>
-      Developed Bayesian models for aligning functional data under temporal variation,
-      enabling uncertainty quantification and robust modeling of nonlinear time-warping patterns.
-    </p>
-  </div>
 
-  <div class="project">
-    <div class="project-title">
-      <a href="projects/customer-service-nlp.html">Customer Service Call Reason Analysis</a>
-    </div>
-    <div class="project-tools">
-      Python, AWS, NLP, BERT, sentence transformers, GPT summarization, topic modeling
-    </div>
-    <p>
-      Analyzed long customer service calls by cleaning unstructured text data, identifying
-      overrepresented call reasons, and applying NLP methods to support operational insights.
-    </p>
-  </div>
+
 
   <div class="project">
     <div class="project-title">
