@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
   <title>Yijia Ma</title>
+
   <style>
     body {
-      font-family: Arial, sans-serif;
-      max-width: 850px;
+      font-family: Arial, Helvetica, sans-serif;
+      max-width: 900px;
       margin: 40px auto;
-      line-height: 1.6;
       padding: 0 20px;
+      line-height: 1.6;
+      color: #222;
+      background-color: #ffffff;
     }
 
     h1 {
-      color: #222;
+      font-size: 32px;
+      margin-bottom: 5px;
     }
 
     h2 {
+      font-size: 22px;
       margin-top: 35px;
       border-bottom: 1px solid #ddd;
       padding-bottom: 5px;
@@ -23,67 +29,221 @@
 
     a {
       color: #0066cc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .top-section {
+      display: flex;
+      align-items: flex-start;
+      gap: 25px;
+    }
+
+    .profile-photo {
+      width: 180px;
+      border-radius: 8px;
+    }
+
+    .links {
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    .links a {
+      margin-right: 12px;
+    }
+
+    .news li {
+      margin-bottom: 6px;
+    }
+
+    .publication {
+      margin-bottom: 25px;
+    }
+
+    .publication-title {
+      font-weight: bold;
+      font-size: 17px;
+    }
+
+    .publication-authors {
+      margin-top: 3px;
+    }
+
+    .publication-venue {
+      font-style: italic;
+      margin-top: 3px;
+    }
+
+    .publication-links {
+      margin-top: 3px;
+    }
+
+    .small-note {
+      color: #666;
+      font-size: 14px;
     }
   </style>
 </head>
 
 <body>
 
-  <h1>Yijia Ma, Ph.D.</h1>
+  <div class="top-section">
+
+    <div>
+      <h1>Yijia Ma</h1>
+      <p>
+        <strong>Ph.D. in Statistics</strong><br>
+        Statistician | Data Scientist | Computational Neuroscience Researcher
+      </p>
+
+      <p>
+        Email: your-email@example.com
+      </p>
+
+      <div class="links">
+        <a href="files/Yijia_Ma_CV.pdf">CV</a> |
+        <a href="YOUR_GOOGLE_SCHOLAR_LINK">Google Scholar</a> |
+        <a href="https://github.com/YMa2019">GitHub</a> |
+        <a href="YOUR_LINKEDIN_LINK">LinkedIn</a>
+      </div>
+    </div>
+
+    <div>
+      <img src="images/profile.jpg" alt="Yijia Ma profile photo" class="profile-photo">
+    </div>
+
+  </div>
 
   <p>
-    I am a statistician and data scientist with research interests in functional data analysis,
-    Bayesian modeling, stochastic processes, EEG/fMRI analysis, and computational neuroscience.
+    Hi, I am Yijia Ma. I received my Ph.D. in Statistics from Florida State University.
+    My research interests broadly lie in functional data analysis, Bayesian modeling,
+    stochastic processes, EEG/fMRI analysis, and computational neuroscience.
   </p>
 
   <p>
-    I received my Ph.D. in Statistics from Florida State University. My work bridges statistical methodology,
-    machine learning, and high-dimensional neural data analysis.
+    My work focuses on developing and applying statistical methods for complex temporal,
+    functional, and high-dimensional biomedical data. I am particularly interested in
+    time-warping models, uncertainty quantification, neural decoding, and multimodal
+    neuroimaging analysis.
   </p>
+
+  <h2>News</h2>
+  <ul class="news">
+    <li>[2025] Our paper on alpha-frequency stimulation and default mode network connectivity was published in <em>eNeuro</em>.</li>
+    <li>[2025] Our Bayesian function registration paper was published in <em>Electronic Journal of Statistics</em>.</li>
+    <li>[2024] Our stochastic process framework for time-warping functions was published in <em>Computational Statistics and Data Analysis</em>.</li>
+    <li>[2024] I received my Ph.D. in Statistics from Florida State University.</li>
+  </ul>
+
+  <h2>Publications</h2>
+
+  <div class="publication">
+    <div class="publication-title">
+      A New Framework for Bayesian Function Registration
+    </div>
+    <div class="publication-authors">
+      Yijia Ma and collaborators
+    </div>
+    <div class="publication-venue">
+      Electronic Journal of Statistics, 2025
+    </div>
+    <div class="publication-links">
+      <a href="#">paper</a> |
+      <a href="#">code</a>
+    </div>
+    <p>
+      This work develops a Bayesian framework for function registration by placing
+      stochastic-process priors directly on time-warping functions, enabling posterior
+      inference and uncertainty quantification for phase variability.
+    </p>
+  </div>
+
+  <div class="publication">
+    <div class="publication-title">
+      A Stochastic Process Framework for Time Warping Functions
+    </div>
+    <div class="publication-authors">
+      Yijia Ma and collaborators
+    </div>
+    <div class="publication-venue">
+      Computational Statistics and Data Analysis, 2024
+    </div>
+    <div class="publication-links">
+      <a href="#">paper</a> |
+      <a href="#">code</a>
+    </div>
+    <p>
+      This paper introduces a linear Hilbert-space representation for nonlinear
+      time-warping functions, supporting Gaussian-process modeling, penalized
+      registration, functional boxplots, and outlier detection.
+    </p>
+  </div>
+
+  <div class="publication">
+    <div class="publication-title">
+      Alpha-Frequency Stimulation Enhances Synchronization of Alpha Oscillations
+      with Default Mode Network Connectivity
+    </div>
+    <div class="publication-authors">
+      Yijia Ma, J. Brown, and collaborators
+    </div>
+    <div class="publication-venue">
+      eNeuro, 2025
+    </div>
+    <div class="publication-links">
+      <a href="#">paper</a>
+    </div>
+    <p>
+      This study uses simultaneous EEG-fMRI to examine how alpha-frequency stimulation
+      modulates alpha oscillations and default mode network connectivity.
+    </p>
+  </div>
 
   <h2>Research Interests</h2>
   <ul>
-    <li>Functional data analysis and time warping</li>
+    <li>Functional data analysis and function registration</li>
     <li>Bayesian modeling and uncertainty quantification</li>
     <li>Stochastic processes and temporal point processes</li>
-    <li>EEG/fMRI data analysis and computational neuroscience</li>
+    <li>EEG/fMRI analysis and neural decoding</li>
     <li>Machine learning for high-dimensional biomedical data</li>
-  </ul>
-
-  <h2>Selected Publications</h2>
-  <ul>
-    <li>
-      A New Framework for Bayesian Function Registration.
-      <em>Electronic Journal of Statistics</em>, 2025.
-    </li>
-    <li>
-      A Stochastic Process Framework for Time Warping Functions.
-      <em>Computational Statistics and Data Analysis</em>, 2024.
-    </li>
-    <li>
-      Alpha-Frequency Stimulation Enhances Synchronization of Alpha Oscillations with Default Mode Network Connectivity.
-      <em>eNeuro</em>, 2025.
-    </li>
   </ul>
 
   <h2>Projects</h2>
   <ul>
-    <li>EEG/fMRI neural decoding and connectivity analysis</li>
-    <li>Bayesian function registration and uncertainty quantification</li>
-    <li>Temporal point process modeling for neural spike trains</li>
-    <li>NLP analysis for customer service call reasons</li>
+    <li>
+      <a href="projects/eeg-fmri.html">EEG/fMRI Neural Decoding and Connectivity Analysis</a>
+    </li>
+    <li>
+      <a href="projects/bayesian-registration.html">Bayesian Function Registration and Uncertainty Quantification</a>
+    </li>
+    <li>
+      <a href="projects/time-warping.html">Stochastic Process Modeling for Time-Warping Functions</a>
+    </li>
+    <li>
+      <a href="projects/point-process.html">Temporal Point Process Modeling for Neural Spike Trains</a>
+    </li>
   </ul>
 
-  <h2>CV</h2>
-  <p>
-    My CV will be available here soon.
-  </p>
+  <h2>Professional Activity</h2>
+  <ul>
+    <li>Postdoctoral Research Fellow / Senior Data Scientist, UTHealth</li>
+    <li>Data Scientist Intern, Travelers</li>
+    <li>Instructor and Teaching Assistant, Florida State University</li>
+    <li>Reviewer for statistical and biomedical research venues</li>
+  </ul>
 
-  <h2>Contact</h2>
-  <p>
-    GitHub: <a href="https://github.com/YMa2019">https://github.com/YMa2019</a><br>
-    Google Scholar: add your link here<br>
-    LinkedIn: add your link here
+  <h2>Awards</h2>
+  <ul>
+    <li>Clara Kibler Davis Scholarship, Florida State University</li>
+    <li>Best First Year Student Award, Department of Statistics, Florida State University</li>
+  </ul>
+
+  <p class="small-note">
+    Last updated: 2026
   </p>
 
 </body>
