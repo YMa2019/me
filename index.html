@@ -90,6 +90,45 @@
       margin-top: 3px;
     }
 
+    .project-row {
+      display: flex;
+      gap: 25px;
+      margin-bottom: 30px;
+      align-items: flex-start;
+    }
+
+    .project-image {
+      width: 360px;
+      max-width: 40%;
+      border-radius: 4px;
+    }
+
+    .project-content {
+      flex: 1;
+    }
+
+    .project-links a {
+      margin-right: 8px;
+    }
+
+    .abstract-link {
+      color: #0066cc;
+      cursor: pointer;
+    }
+
+    .abstract-link:hover {
+      text-decoration: underline;
+    }
+
+    .abstract-box {
+      display: none;
+      background-color: #f7f7f7;
+      border-left: 4px solid #0066cc;
+      padding: 12px 16px;
+      margin-top: 10px;
+      font-size: 15px;
+    }
+
     .publication {
       margin-bottom: 18px;
     }
@@ -102,6 +141,21 @@
       color: #666;
       font-size: 14px;
       margin-top: 40px;
+    }
+
+    @media (max-width: 700px) {
+      .top-section {
+        flex-direction: column;
+      }
+
+      .project-row {
+        flex-direction: column;
+      }
+
+      .project-image {
+        max-width: 100%;
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -174,72 +228,69 @@
     <li><strong>Biomedical/Neural Data:</strong> EEG/fMRI preprocessing, ICA, spectral analysis, connectivity analysis, ROI-level fMRI modeling</li>
     <li><strong>Tools:</strong> Pandas, NumPy, SciPy, MNE, SPM, CONN, Tableau, AWS, Git</li>
   </ul>
-  
+
   <h2>Education</h2>
   <ul>
     <li>Ph.D. in Statistics, Florida State University</li>
     <li>M.S. in Applied Mathematics and Statistics, Stony Brook University</li>
     <li>B.S. in Actuarial Science and Risk Management</li>
-    </ul>
-  
-    <h2>Experience</h2>
-    <ul>
-      <li>
-        <strong>Postdoctoral Research Fellow / Senior Data Scientist</strong>,
-        UTHealth, Houston, TX
-      </li>
-      <li>
-        <strong>Data Scientist Intern</strong>,
-        Travelers
-      </li>
-       <li>
-        <strong>Ph.D. Researcher and Instructor</strong>,
-        Florida State University
-      </li>
   </ul>
 
-  
+  <h2>Experience</h2>
+  <ul>
+    <li>
+      <strong>Postdoctoral Research Fellow / Senior Data Scientist</strong>,
+      UTHealth, Houston, TX
+    </li>
+    <li>
+      <strong>Data Scientist Intern</strong>,
+      Travelers
+    </li>
+    <li>
+      <strong>Ph.D. Researcher and Instructor</strong>,
+      Florida State University
+    </li>
+  </ul>
 
   <h2>Selected Projects</h2>
 
   <div class="project-row">
     <img src="images/eeg-models.svg" alt="Let EEG Models Learn EEG project figure" class="project-image">
-  
+
     <div class="project-content">
       <div class="project-title">
         <a href="projects/let-eeg-models-learn-eeg.html">Let EEG Models Learn EEG</a>
       </div>
-  
+
       <p>
         <strong>Yifan Wang, Yijia Ma, Wen Li, Chenyu You</strong><br>
         <em>ICML, 2026</em>
       </p>
-  
+
       <p>
         This project develops principled constraints for EEG representation learning,
         helping EEG models better capture signal structure and improve model generalization
         for neural time-series analysis.
       </p>
-  
+
       <div class="project-tools">
         EEG, representation learning, neural time series, machine learning, model constraints
       </div>
-  
+
       <p class="project-links">
         <a href="https://y-research-sbu.github.io/JET">webpage</a> |
         <span class="abstract-link" onclick="toggleAbstract('eeg-abstract')">abstract</span> |
         <a href="https://arxiv.org/abs/2605.21280">paper</a> |
         <a href="https://github.com/Y-Research-SBU/JET">code</a>
       </p>
-      <div id="eeg-abstract" class="abstract-box"> 
-        <strong>Abstract.</strong> 
+
+      <div id="eeg-abstract" class="abstract-box">
+        <strong>Abstract.</strong>
         High-fidelity EEG generation is critical for alleviating data scarcity and addressing privacy constraints in large-scale neural modeling. Despite recent progress, most existing approaches formulate EEG generation via discrete denoising objectives, which inadequately reflect the inherently continuous temporal dynamics and spectral structure of neural activity. As a result, these methods often struggle to preserve long-range temporal dependencies and exhibit mismatches in the spectral and temporal structure of the generated signals. In this work, we argue that effective EEG generation requires models that operate directly on the continuous evolution of neural signals. We introduce Just EEG Transformer (JET), a generative framework based on conditional flow matching that models EEG as raw sequences evolving along continuous trajectories. By learning a smooth vector field that transports noise to the EEG data distribution, JET captures temporal continuity and transient dynamics without relying on discretized denoising schemes or domain-specific representations. To ensure that the learned dynamics remain consistent with key properties of EEG signals, we introduce principled constraints that preserve spectral structure, temporal stationarity, and signal-level statistics. Across three large-scale benchmarks, JET consistently achieves state-of-the-art performance, reducing TS-FID by over 40% compared to strong baselines. Extensive analyses show that JET captures key structural properties of neural dynamics, providing a scalable and principled approach to EEG generation.
       </div>
     </div>
   </div>
 
-
-  
   <div class="project">
     <div class="project-title">
       <a href="projects/eeg-fmri.html">EEG/fMRI Neural Decoding and Connectivity Analysis</a>
@@ -322,13 +373,23 @@
     </div>
   </div>
 
-
-
-
   <p class="small-note">
     Last updated: 2026
   </p>
 
+  <script>
+    function toggleAbstract(id) {
+      var abstractBox = document.getElementById(id);
+
+      if (abstractBox.style.display === "block") {
+        abstractBox.style.display = "none";
+      } else {
+        abstractBox.style.display = "block";
+      }
+    }
+  </script>
+
 </body>
 </html>
-```
+
+
