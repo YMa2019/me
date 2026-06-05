@@ -328,8 +328,7 @@
       </p>
 
       <p>
-        This project develops a Bayesian framework for functional data alignment, enabling flexible stochastic-process modeling of time-warping functions and uncertainty quantification for complex temporal variation.
-      </p>
+      This project introduces a Bayesian function registration framework that places stochastic-process priors directly on time-warping functions, improving alignment accuracy, posterior inference, and uncertainty quantification for temporally misaligned functional data.      </p>
 
       <div class="project-tools">
         Bayesian Modeling, MCMC, Stochastic process, functional data analysis, Prior constraints
@@ -342,22 +341,13 @@
         <a href="https://github.com/YMa2019/multi-align">code</a>
       </p>
 
-      <div id="eeg-abstract" class="abstract-box">
-        <strong>Abstract.</strong>
-          Function registration, also referred to as alignment, has been one of the fundamental problems in the field of functional data analysis. Classical registration methods
-          such as the Fisher-Rao alignment focus on estimating optimal time warping function between functions. In recent studies, a model on time warping has attracted more attention,
-          and it can be used as a prior term to combine with the classical method (as a likelihood
-          term) in a Bayesian framework. The Bayesian approaches have been shown improvement
-          over the classical methods. However, its prior model on time warping is often based on a
-          nonlinear approximation, which may introduce inaccuracy and inefficiency. To overcome
-          these problems, we propose a new Bayesian approach by adopting a prior which provides
-          a linear representation and various stochastic processes (Gaussian or non-Gaussian) can be
-          effectively utilized on time warping. No linearization approximation is needed in the time
-          warping computation, and the posterior can be obtained via a conventional Markov Chain
-          Monte Carlo approach. We thoroughly investigate the impact of the prior on the performance of functional registration with multiple simulation examples, which demonstrate the
-          superiority of the new framework over the previous methods. We finally utilize the new
-          method in a real dataset and obtain desirable alignment result.     
-      </div>
+
+    <div id="bayesian-registration-abstract" class="abstract-box">
+      <strong>Abstract.</strong>
+      Function registration, also known as alignment, is a fundamental problem in functional data analysis. Classical registration methods, such as Fisher-Rao alignment, focus on estimating optimal time-warping functions between curves. Recent Bayesian approaches model time warping directly by combining a prior on warping functions with a classical registration criterion as the likelihood term. These Bayesian methods have shown improvements over classical approaches. However, existing prior models often rely on nonlinear approximations, which may introduce inaccuracy and computational inefficiency. To address these limitations, we propose a new Bayesian framework that uses a linear representation of time-warping functions, allowing flexible Gaussian or non-Gaussian stochastic-process priors. This approach avoids linearization approximation in time-warping computation and obtains posterior inference through conventional Markov Chain Monte Carlo methods. Through multiple simulation studies, we investigate how the choice of prior affects registration performance and demonstrate that the proposed framework outperforms previous methods. We also apply the method to a real dataset and obtain desirable alignment results.
+    </div>
+
+
     </div>
   </div>
 
