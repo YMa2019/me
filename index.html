@@ -347,7 +347,37 @@
       Function registration, also known as alignment, is a fundamental problem in functional data analysis. Classical registration methods, such as Fisher-Rao alignment, focus on estimating optimal time-warping functions between curves. Recent Bayesian approaches model time warping directly by combining a prior on warping functions with a classical registration criterion as the likelihood term. These Bayesian methods have shown improvements over classical approaches. However, existing prior models often rely on nonlinear approximations, which may introduce inaccuracy and computational inefficiency. To address these limitations, we propose a new Bayesian framework that uses a linear representation of time-warping functions, allowing flexible Gaussian or non-Gaussian stochastic-process priors. This approach avoids linearization approximation in time-warping computation and obtains posterior inference through conventional Markov Chain Monte Carlo methods. Through multiple simulation studies, we investigate how the choice of prior affects registration performance and demonstrate that the proposed framework outperforms previous methods. We also apply the method to a real dataset and obtain desirable alignment results.
     </div>
 
+  <div class="project-row">
+    <img src="images/timewarp.png" alt="A stochastic process representation for time warping functions" class="project-image">
 
+    <div class="project-content">
+      <div class="project-title">
+        <a href="https://ani.stat.fsu.edu/~wwu/papers/MaCSDA2024.pdf">A stochastic process representation for time warping functions</a>
+      </div>
+
+      <p>
+        <strong>Yijia Ma</strong>, Xinyu Zhou, Wei Wu<br>
+        <em>Computational Statistics & Data Analysis, 2024</em>
+      </p>
+
+      <p>
+      This project develops a stochastic-process framework for modeling nonlinear time-warping functions, enabling flexible simulation, penalized functional alignment, uncertainty-aware phase-variation analysis, and outlier detection in complex temporal data.
+
+      <div class="project-tools">
+        Hilbert space, Stochastic process, functional data analysis, Penalized function registratio, Functional boxplot
+      </div>
+
+      <p class="project-links">
+        <a href="https://y-research-sbu.github.io/JET">webpage</a> |
+        <span class="abstract-link" onclick="toggleAbstract('time-warping-abstract')">abstract</span> |
+        <a href="https://projecteuclid.org/journals/electronic-journal-of-statistics/volume-19/issue-1/A-new-framework-for-Bayesian-function-registration/10.1214/25-EJS2383.pdf">paper</a> |
+        <a href="https://github.com/YMa2019/warping">code</a>
+      </p>
+
+
+    <div id="time-warping-abstract" class="abstract-box">
+      <strong>Abstract.</strong> Time-warping functions provide a mathematical representation for measuring phase variability in functional data. Although recent studies have developed various approaches to estimate optimal warpings between functions, a principled, linear, and generative representation of time-warping functions remains under-explored because warping functions are nonlinear in the conventional L2 space. To address this problem, we define a new linear warping space and propose a stochastic-process representation to characterize time-warping functions. The key idea is to define an inner-product structure on the warping space, followed by a transformation that maps warping functions into a subspace of L2. Under certain constraints, this transformation is an isometric isomorphism. In the transformed space, L2 basis functions in a Hilbert space can be used to generate time-warping functions through different types of stochastic processes. The effectiveness of this representation is demonstrated by using it as a new penalty in penalized function registration, together with an efficient gradient method for minimizing the cost function. The proposed penalized method is illustrated through simulations that characterize nonuniform and correlated constraints in the time domain. This representation is also used to develop boxplots for warping functions, estimate templates, and identify warping outliers. Finally, the method is applied to a COVID-19 dataset to construct boxplots and identify states with outlying growth patterns.
+    </div>
     </div>
   </div>
 
