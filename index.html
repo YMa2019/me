@@ -7,38 +7,10 @@
   <style>
     body {
       font-family: Arial, Helvetica, sans-serif;
-      max-width: 950px;
-      margin: 40px auto;
-      padding: 0 20px;
+      margin: 0;
       line-height: 1.6;
-      color: #222;
+      color: #333;
       background-color: #ffffff;
-    }
-    .location-line {
-      font-size: 16px;
-      color: #444;
-      margin-top: 16px;
-      margin-bottom: 4px;
-    }
-    
-    .role-line {
-      font-size: 16px;
-      color: #444;
-      max-width: 760px;
-      margin-top: 0;
-      margin-bottom: 18px;
-    }
-
-    h1 {
-      font-size: 34px;
-      margin-bottom: 5px;
-    }
-
-    h2 {
-      font-size: 22px;
-      margin-top: 35px;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 5px;
     }
 
     a {
@@ -50,71 +22,200 @@
       text-decoration: underline;
     }
 
-    .top-section {
+    /* Top navigation bar */
+    .navbar {
+      height: 60px;
+      border-bottom: 1px solid #e5e5e5;
       display: flex;
-      align-items: flex-start;
-      gap: 30px;
+      align-items: center;
+      padding: 0 36px;
+      background-color: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-name {
+      font-weight: bold;
+      font-size: 18px;
+      margin-right: 55px;
+      color: #555;
+    }
+
+    .nav-links a {
+      margin-right: 32px;
+      color: #666;
+      font-size: 17px;
+    }
+
+    .nav-links a:hover {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    /* Page layout */
+    .page {
+      max-width: 1180px;
+      margin: 35px auto;
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 55px;
+      padding: 0 30px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      color: #444;
     }
 
     .profile-photo {
-      width: 180px;
-      border-radius: 8px;
+      width: 170px;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 1px solid #eee;
+      padding: 4px;
+      background-color: #fff;
+      display: block;
+      margin-bottom: 18px;
+    }
+
+    .sidebar-name {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .sidebar-title {
+      font-size: 15px;
+      margin-bottom: 18px;
+    }
+
+    .sidebar-item {
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    .sidebar-links {
+      margin-top: 18px;
+    }
+
+    .sidebar-links a {
+      display: block;
+      margin-bottom: 10px;
+      color: #444;
+    }
+
+    .sidebar-links a:hover {
+      color: #0066cc;
+    }
+
+    /* Main content */
+    .content {
+      max-width: 850px;
+    }
+
+    h1 {
+      font-size: 34px;
+      margin: 0 0 10px 0;
+      color: #444;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-top: 38px;
+      margin-bottom: 16px;
+      color: #444;
+      border-bottom: none;
+    }
+
+    h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+      color: #444;
     }
 
     .subtitle {
-      font-size: 18px;
-      color: #444;
-      margin-top: 5px;
-    }
-
-    .links {
-      margin-top: 15px;
+      font-size: 19px;
+      color: #555;
       margin-bottom: 20px;
     }
 
-    .links a {
-      margin-right: 12px;
+    .role-line {
+      font-size: 16px;
+      color: #555;
+      margin-top: 8px;
+      margin-bottom: 18px;
+    }
+
+    .button-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 18px 0 24px 0;
+    }
+
+    .button-links a {
+      display: inline-block;
+      padding: 6px 12px;
+      border: 1px solid #0066cc;
+      border-radius: 6px;
+      color: #0066cc;
       font-weight: bold;
     }
 
-    .tagline {
-      font-size: 17px;
-      margin-top: 20px;
+    .button-links a:hover {
+      background-color: #0066cc;
+      color: white;
+      text-decoration: none;
     }
 
     .highlight-box {
       background-color: #f7f7f7;
       border-left: 4px solid #0066cc;
-      padding: 15px 20px;
+      padding: 14px 18px;
       margin-top: 20px;
-    }
-
-    .project {
       margin-bottom: 25px;
     }
 
-    .project-title {
+    ul {
+      padding-left: 24px;
+    }
+
+    li {
+      margin-bottom: 7px;
+    }
+
+    /* Skills */
+    .skills-list li {
+      margin-bottom: 8px;
+    }
+
+    /* Education and experience */
+    .entry {
+      margin-bottom: 18px;
+    }
+
+    .entry-title {
       font-weight: bold;
-      font-size: 17px;
     }
 
-    .project-tools {
+    .entry-detail {
       color: #555;
-      font-size: 15px;
-      margin-top: 3px;
     }
 
+    /* Projects */
     .project-row {
       display: flex;
-      gap: 25px;
-      margin-bottom: 30px;
+      gap: 28px;
+      margin-bottom: 42px;
       align-items: flex-start;
     }
 
     .project-image {
-      width: 340px;
-      max-width: 40%;
-      max-height: 340px;
+      width: 300px;
+      max-width: 38%;
+      max-height: 260px;
       object-fit: contain;
       border-radius: 4px;
     }
@@ -123,11 +224,29 @@
       flex: 1;
     }
 
-    .project-links a {
-      margin-right: 0;
+    .project-title {
+      font-weight: bold;
+      font-size: 21px;
+      margin-bottom: 10px;
     }
-    .project-links span {
-      margin-right: 0;
+
+    .project-title a {
+      color: #0066cc;
+    }
+
+    .project-meta {
+      margin-bottom: 12px;
+    }
+
+    .project-tools {
+      color: #555;
+      font-size: 15px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .project-links {
+      margin-top: 10px;
     }
 
     .abstract-link {
@@ -148,23 +267,67 @@
       font-size: 15px;
     }
 
+    .project-simple {
+      margin-bottom: 35px;
+    }
+
+    /* Publications */
     .publication {
-      margin-bottom: 18px;
+      margin-bottom: 24px;
     }
 
     .publication-title {
       font-weight: bold;
+      font-size: 18px;
+    }
+
+    .publication-authors {
+      margin-top: 3px;
+      color: #444;
+    }
+
+    .publication-venue {
+      margin-top: 3px;
+      color: #555;
     }
 
     .small-note {
       color: #666;
       font-size: 14px;
-      margin-top: 40px;
+      margin-top: 45px;
+      margin-bottom: 30px;
     }
 
-    @media (max-width: 700px) {
-      .top-section {
+    @media (max-width: 800px) {
+      .navbar {
+        padding: 0 20px;
+        height: auto;
+        min-height: 60px;
         flex-direction: column;
+        align-items: flex-start;
+        padding-top: 12px;
+        padding-bottom: 12px;
+      }
+
+      .nav-name {
+        margin-right: 0;
+        margin-bottom: 8px;
+      }
+
+      .nav-links a {
+        margin-right: 16px;
+        font-size: 15px;
+      }
+
+      .page {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-top: 25px;
+      }
+
+      .profile-photo {
+        width: 150px;
+        height: 150px;
       }
 
       .project-row {
@@ -174,6 +337,7 @@
       .project-image {
         max-width: 100%;
         width: 100%;
+        max-height: none;
       }
     }
   </style>
@@ -181,298 +345,348 @@
 
 <body>
 
-  <div class="top-section">
+  <nav class="navbar">
+    <div class="nav-name">Yijia Ma</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#publications">Publications</a>
+    </div>
+  </nav>
 
-    <div>
-      <h1>Yijia Ma, Ph.D.</h1>
+  <div class="page">
 
-      <div class="subtitle">
-        Data Scientist | Statistician | Machine Learning & Biomedical Data Analytics
+    <aside class="sidebar">
+      <img src="images/profile.png" alt="Yijia Ma profile photo" class="profile-photo">
+
+      <div class="sidebar-name">Yijia Ma</div>
+
+      <div class="sidebar-title">
+        Data Scientist · Statistician
       </div>
 
-      <p class="location-line">
+      <div class="sidebar-item">
         Houston, TX
-      </p>
-      
-      <p class="role-line">
-        Open to Data Scientist, Senior Data Scientist, Statistician,
-        Quantitative Analyst, and Applied Scientist roles
-      </p>
+      </div>
 
-      <div class="links">
-        <a href="files/YijiaMa_Quant_Resume_2026.pdf">Resume</a> |
-        <a href="https://github.com/YMa2019">GitHub</a> |
-        <a href="https://www.linkedin.com/in/cecelia-ma/">LinkedIn</a> |
+      <div class="sidebar-item">
+        Open to Data Scientist, Senior Data Scientist, Statistician, Quantitative Analyst, and Applied Scientist roles
+      </div>
+
+      <div class="sidebar-links">
+        <a href="files/YijiaMa_Quant_Resume_2026.pdf">Resume</a>
+        <a href="https://github.com/YMa2019">GitHub</a>
+        <a href="https://www.linkedin.com/in/cecelia-ma/">LinkedIn</a>
         <a href="https://scholar.google.com/citations?user=h1cmeZkAAAAJ">Google Scholar</a>
       </div>
-    </div>
+    </aside>
 
-    <div>
-      <img src="images/profile.png" alt="Yijia Ma profile photo" class="profile-photo">
-    </div>
+    <main class="content">
 
-  </div>
+      <section id="about">
+        <h1>Yijia Ma, Ph.D.</h1>
 
-  <p class="tagline">
-    I am a statistician and data scientist with expertise in statistical modeling,
-    machine learning, high-dimensional data analysis, and biomedical/neuroscience data.
-    My work bridges rigorous statistical methodology with practical data science pipelines
-    for complex temporal, functional, and multimodal datasets.
-  </p>
+        <div class="subtitle">
+          Data Scientist | Statistician | Machine Learning &amp; Biomedical Data Analytics
+        </div>
 
-  <div class="highlight-box">
-    <strong>Core strengths:</strong>
-    Statistical modeling, machine learning, Bayesian modeling, functional data analysis,
-    time-series analysis, EEG/fMRI analytics, NLP, cross-validation, permutation testing,
-    uncertainty quantification, and reproducible Python/MATLAB/R workflows.
-  </div>
+        <p>
+          I am a statistician and data scientist with expertise in statistical modeling,
+          machine learning, high-dimensional data analysis, and biomedical/neuroscience data.
+          My work bridges rigorous statistical methodology with practical data science pipelines
+          for complex temporal, functional, and multimodal datasets.
+        </p>
 
-  <h2>Professional Summary</h2>
-  <p>
-    I have experience developing end-to-end analytical pipelines, including data cleaning,
-    feature engineering, statistical modeling, machine learning, model validation, and
-    interpretation of results for scientific and business stakeholders. My background combines
-    a Ph.D. in Statistics with applied experience in healthcare/neuroscience analytics and
-    industry data science.
-  </p>
+        <div class="highlight-box">
+          <strong>Core strengths:</strong>
+          statistical modeling, machine learning, Bayesian modeling, functional data analysis,
+          time-series analysis, EEG/fMRI analytics, NLP, cross-validation, permutation testing,
+          uncertainty quantification, and reproducible Python/MATLAB/R workflows.
+        </div>
 
-  <p>
-    I am particularly interested in roles involving predictive modeling, high-dimensional data,
-    experimentation, causal or statistical inference, biomedical data science, customer analytics,
-    risk modeling, and quantitative research.
-  </p>
+        <p>
+          I have experience developing end-to-end analytical pipelines, including data cleaning,
+          feature engineering, statistical modeling, machine learning, model validation, and
+          interpretation of results for scientific and business stakeholders. My background combines
+          a Ph.D. in Statistics with applied experience in healthcare/neuroscience analytics and
+          industry data science.
+        </p>
 
-  <h2>Technical Skills</h2>
-  <ul>
-    <li><strong>Programming:</strong> Python, R, MATLAB, SQL, SAS, SPSS</li>
-    <li><strong>Machine Learning:</strong> scikit-learn, PyTorch, TensorFlow, logistic regression, SVM, random forests, XGBoost, LightGBM, clustering, Transformers</li>
-    <li><strong>Statistics:</strong> Bayesian modeling, mixed-effects models, GLM, functional data analysis, stochastic processes, uncertainty quantification, permutation testing</li>
-    <li><strong>Data Science:</strong> data cleaning, feature engineering, model validation, cross-validation, hyperparameter tuning, anomaly detection, NLP, topic modeling</li>
-    <li><strong>Biomedical/Neural Data:</strong> EEG/fMRI preprocessing, ICA, spectral analysis, connectivity analysis, ROI-level fMRI modeling</li>
-    <li><strong>Tools:</strong> Pandas, NumPy, SciPy, MNE, SPM, CONN, Tableau, AWS, Git</li>
-  </ul>
+        <p>
+          I am particularly interested in roles involving predictive modeling, high-dimensional data,
+          experimentation, causal or statistical inference, biomedical data science, customer analytics,
+          risk modeling, and quantitative research.
+        </p>
+      </section>
 
-  <h2>Education</h2>
-  <ul>
-    <li>
-      <strong>Ph.D. in Statistics</strong>, 
-      <a href="https://www.fsu.edu/">Florida State University</a><br>
-      GPA: 4.0/4.0<br>
-      Awards: Clara Kibler Davis Scholarship; Best First Year Student Award
-    </li>
-  
-    <li>
-      <strong>M.S. in Applied Mathematics and Statistics</strong>, 
-      <a href="https://www.stonybrook.edu/">Stony Brook University</a><br>
-      GPA: 3.92/4.0<br>
-    </li>
-  
-    <li>
-      <strong>B.S. in Actuarial Science and Risk Management</strong>, 
-      <a href="https://tjufe.admissions.cn/info/Tianjin%20University%20of%20Finance%20and%20Economics">Tianjin University of Finance and Economics</a><br>
-    </li>
-  </ul>
+      <section id="skills">
+        <h2>Technical Skills</h2>
 
-  <h2>Experience</h2>
-  <ul>
-    <li>
-      <strong>Research Scientist / Data Scientist</strong>,
-      <a href="https://www.uth.edu/">UTHealth Houston</a>, Houston, TX
-    </li>
-  
-    <li>
-      <strong>Data Scientist Intern</strong>,
-      <a href="https://www.travelers.com/">Travelers</a>, Hartford, CT
-    </li>
-  
-    <li>
-      <strong>Solo Instructor / Research Assistant / Teaching Assistant</strong>,
-      <a href="https://www.fsu.edu/">Florida State University</a>, Tallahassee, FL
-    </li>
-  
-    <li>
-      <strong>Analyst</strong>,
-      <a href="https://www.vendorteamservices.com/">Vendor Team Services</a>, Mooresville, NC
-    </li>
-  </ul>
+        <ul class="skills-list">
+          <li><strong>Programming:</strong> Python, R, MATLAB, SQL, SAS, SPSS</li>
+          <li><strong>Machine Learning:</strong> scikit-learn, PyTorch, TensorFlow, logistic regression, SVM, random forests, XGBoost, LightGBM, clustering, Transformers</li>
+          <li><strong>Statistics:</strong> Bayesian modeling, mixed-effects models, GLM, functional data analysis, stochastic processes, uncertainty quantification, permutation testing</li>
+          <li><strong>Data Science:</strong> data cleaning, feature engineering, model validation, cross-validation, hyperparameter tuning, anomaly detection, NLP, topic modeling</li>
+          <li><strong>Biomedical/Neural Data:</strong> EEG/fMRI preprocessing, ICA, spectral analysis, connectivity analysis, ROI-level fMRI modeling</li>
+          <li><strong>Tools:</strong> Pandas, NumPy, SciPy, MNE, SPM, CONN, Tableau, AWS, Git</li>
+        </ul>
+      </section>
 
-  <h2>Selected Projects</h2>
+      <section id="education">
+        <h2>Education</h2>
 
-  <div class="project-row">
-    <img src="images/eeg-models.svg" alt="Let EEG Models Learn EEG project figure" class="project-image">
+        <div class="entry">
+          <div class="entry-title">
+            Ph.D. in Statistics,
+            <a href="https://www.fsu.edu/">Florida State University</a>
+          </div>
+          <div class="entry-detail">
+            GPA: 4.0/4.0<br>
+            Awards: Clara Kibler Davis Scholarship; Best First Year Student Award
+          </div>
+        </div>
 
-    <div class="project-content">
-      <div class="project-title">
-        <a href="https://arxiv.org/abs/2605.21280">Let EEG Models Learn EEG</a>
-      </div>
+        <div class="entry">
+          <div class="entry-title">
+            M.S. in Applied Mathematics and Statistics,
+            <a href="https://www.stonybrook.edu/">Stony Brook University</a>
+          </div>
+          <div class="entry-detail">
+            GPA: 3.92/4.0
+          </div>
+        </div>
 
-      <p>
-        Yifan Wang, <strong>Yijia Ma</strong>, Wen Li, Chenyu You<br>
-        <em>ICML, 2026</em>
+        <div class="entry">
+          <div class="entry-title">
+            B.S. in Actuarial Science and Risk Management,
+            <a href="https://tjufe.admissions.cn/info/Tianjin%20University%20of%20Finance%20and%20Economics">Tianjin University of Finance and Economics</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience">
+        <h2>Experience</h2>
+
+        <div class="entry">
+          <div class="entry-title">
+            Research Scientist / Data Scientist,
+            <a href="https://www.uth.edu/">UTHealth Houston</a>
+          </div>
+          <div class="entry-detail">Houston, TX</div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-title">
+            Data Scientist Intern,
+            <a href="https://www.travelers.com/">Travelers</a>
+          </div>
+          <div class="entry-detail">Hartford, CT</div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-title">
+            Solo Instructor / Research Assistant / Teaching Assistant,
+            <a href="https://www.fsu.edu/">Florida State University</a>
+          </div>
+          <div class="entry-detail">Tallahassee, FL</div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-title">
+            Analyst,
+            <a href="https://www.vendorteamservices.com/">Vendor Team Services</a>
+          </div>
+          <div class="entry-detail">Mooresville, NC</div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Selected Projects</h2>
+
+        <div class="project-row">
+          <img src="images/eeg-models.svg" alt="Let EEG Models Learn EEG project figure" class="project-image">
+
+          <div class="project-content">
+            <div class="project-title">
+              <a href="https://arxiv.org/abs/2605.21280">Let EEG Models Learn EEG</a>
+            </div>
+
+            <div class="project-meta">
+              Yifan Wang, <strong>Yijia Ma</strong>, Wen Li, Chenyu You<br>
+              <em>ICML, 2026</em>
+            </div>
+
+            <p>
+              This project develops principled constraints for EEG representation learning,
+              helping EEG models better capture signal structure and improve model generalization
+              for neural time-series analysis.
+            </p>
+
+            <div class="project-tools">
+              EEG, representation learning, neural time series, machine learning, model constraints
+            </div>
+
+            <p class="project-links">
+              <a href="https://y-research-sbu.github.io/JET">webpage</a> |
+              <span class="abstract-link" onclick="toggleAbstract('eeg-abstract')">abstract</span> |
+              <a href="https://arxiv.org/abs/2605.21280">paper</a> |
+              <a href="https://github.com/Y-Research-SBU/JET">code</a>
+            </p>
+
+            <div id="eeg-abstract" class="abstract-box">
+              <strong>Abstract.</strong>
+              High-fidelity EEG generation is critical for alleviating data scarcity and addressing privacy constraints in large-scale neural modeling. Despite recent progress, most existing approaches formulate EEG generation via discrete denoising objectives, which inadequately reflect the inherently continuous temporal dynamics and spectral structure of neural activity. As a result, these methods often struggle to preserve long-range temporal dependencies and exhibit mismatches in the spectral and temporal structure of the generated signals. In this work, we argue that effective EEG generation requires models that operate directly on the continuous evolution of neural signals. We introduce Just EEG Transformer (JET), a generative framework based on conditional flow matching that models EEG as raw sequences evolving along continuous trajectories. By learning a smooth vector field that transports noise to the EEG data distribution, JET captures temporal continuity and transient dynamics without relying on discretized denoising schemes or domain-specific representations. To ensure that the learned dynamics remain consistent with key properties of EEG signals, we introduce principled constraints that preserve spectral structure, temporal stationarity, and signal-level statistics. Across three large-scale benchmarks, JET consistently achieves state-of-the-art performance, reducing TS-FID by over 40% compared to strong baselines. Extensive analyses show that JET captures key structural properties of neural dynamics, providing a scalable and principled approach to EEG generation.
+            </div>
+          </div>
+        </div>
+
+        <div class="project-row">
+          <img src="images/EJS_bayes.png" alt="A new framework for Bayesian function registration figure" class="project-image">
+
+          <div class="project-content">
+            <div class="project-title">
+              <a href="https://projecteuclid.org/journals/electronic-journal-of-statistics/volume-19/issue-1/A-new-framework-for-Bayesian-function-registration/10.1214/25-EJS2383.pdf">A New Framework for Bayesian Function Registration</a>
+            </div>
+
+            <div class="project-meta">
+              <strong>Yijia Ma</strong>, Wei Wu<br>
+              <em>Electronic Journal of Statistics, 2025</em>
+            </div>
+
+            <p>
+              This project introduces a Bayesian function registration framework that places stochastic-process priors directly on time-warping functions, improving alignment accuracy, posterior inference, and uncertainty quantification for temporally misaligned functional data.
+            </p>
+
+            <div class="project-tools">
+              Bayesian modeling, MCMC, stochastic processes, functional data analysis, prior constraints
+            </div>
+
+            <p class="project-links">
+              <a href="https://yma2019.github.io/me/">webpage</a> |
+              <span class="abstract-link" onclick="toggleAbstract('bayesian-registration-abstract')">abstract</span> |
+              <a href="https://projecteuclid.org/journals/electronic-journal-of-statistics/volume-19/issue-1/A-new-framework-for-Bayesian-function-registration/10.1214/25-EJS2383.pdf">paper</a> |
+              <a href="https://github.com/YMa2019/multi-align">code</a>
+            </p>
+
+            <div id="bayesian-registration-abstract" class="abstract-box">
+              <strong>Abstract.</strong>
+              Function registration, also known as alignment, is a fundamental problem in functional data analysis. Classical registration methods, such as Fisher-Rao alignment, focus on estimating optimal time-warping functions between curves. Recent Bayesian approaches model time warping directly by combining a prior on warping functions with a classical registration criterion as the likelihood term. These Bayesian methods have shown improvements over classical approaches. However, existing prior models often rely on nonlinear approximations, which may introduce inaccuracy and computational inefficiency. To address these limitations, we propose a new Bayesian framework that uses a linear representation of time-warping functions, allowing flexible Gaussian or non-Gaussian stochastic-process priors. This approach avoids linearization approximation in time-warping computation and obtains posterior inference through conventional Markov Chain Monte Carlo methods. Through multiple simulation studies, we investigate how the choice of prior affects registration performance and demonstrate that the proposed framework outperforms previous methods. We also apply the method to a real dataset and obtain desirable alignment results.
+            </div>
+          </div>
+        </div>
+
+        <div class="project-row">
+          <img src="images/timewarp.png" alt="A stochastic process representation for time warping functions" class="project-image">
+
+          <div class="project-content">
+            <div class="project-title">
+              <a href="https://ani.stat.fsu.edu/~wwu/papers/MaCSDA2024.pdf">A Stochastic Process Representation for Time Warping Functions</a>
+            </div>
+
+            <div class="project-meta">
+              <strong>Yijia Ma</strong>, Xinyu Zhou, Wei Wu<br>
+              <em>Computational Statistics &amp; Data Analysis, 2024</em>
+            </div>
+
+            <p>
+              This project develops a stochastic-process framework for modeling nonlinear time-warping functions, enabling flexible simulation, penalized functional alignment, uncertainty-aware phase-variation analysis, and outlier detection in complex temporal data.
+            </p>
+
+            <div class="project-tools">
+              Hilbert space, stochastic processes, functional data analysis, penalized function registration, functional boxplots
+            </div>
+
+            <p class="project-links">
+              <a href="https://yma2019.github.io/me/">webpage</a> |
+              <span class="abstract-link" onclick="toggleAbstract('time-warping-abstract')">abstract</span> |
+              <a href="https://ani.stat.fsu.edu/~wwu/papers/MaCSDA2024.pdf">paper</a> |
+              <a href="https://github.com/YMa2019/warping">code</a>
+            </p>
+
+            <div id="time-warping-abstract" class="abstract-box">
+              <strong>Abstract.</strong>
+              Time-warping functions provide a mathematical representation for measuring phase variability in functional data. Although recent studies have developed various approaches to estimate optimal warpings between functions, a principled, linear, and generative representation of time-warping functions remains under-explored because warping functions are nonlinear in the conventional L2 space. To address this problem, we define a new linear warping space and propose a stochastic-process representation to characterize time-warping functions. The key idea is to define an inner-product structure on the warping space, followed by a transformation that maps warping functions into a subspace of L2. Under certain constraints, this transformation is an isometric isomorphism. In the transformed space, L2 basis functions in a Hilbert space can be used to generate time-warping functions through different types of stochastic processes. The effectiveness of this representation is demonstrated by using it as a new penalty in penalized function registration, together with an efficient gradient method for minimizing the cost function. The proposed penalized method is illustrated through simulations that characterize nonuniform and correlated constraints in the time domain. This representation is also used to develop boxplots for warping functions, estimate templates, and identify warping outliers. Finally, the method is applied to a COVID-19 dataset to construct boxplots and identify states with outlying growth patterns.
+            </div>
+          </div>
+        </div>
+
+        <div class="project-simple">
+          <div class="project-title">
+            <a href="https://www.kaggle.com/competitions/fsu-spring-22/overview">Customer Lifetime Value Prediction</a>
+          </div>
+
+          <p>
+            This project builds machine learning models to predict customer lifetime value from
+            large-scale customer records, supporting customer analytics, revenue forecasting,
+            and data-driven business decision-making.
+          </p>
+
+          <div class="project-tools">
+            Python, data cleaning, missing-value imputation, feature selection, Random Forest, XGBoost, LightGBM, hyperparameter tuning
+          </div>
+
+          <p class="project-links">
+            <span class="abstract-link" onclick="toggleAbstract('clv-abstract')">details</span>
+          </p>
+
+          <div id="clv-abstract" class="abstract-box">
+            <strong>Details.</strong>
+            Cleaned and imputed 75K+ customer records, performed feature selection using filter,
+            wrapper, and embedded strategies, and trained Random Forest, XGBoost, and LightGBM
+            models with systematic hyperparameter tuning, achieving RMSE = 56.59.
+          </div>
+        </div>
+      </section>
+
+      <section id="publications">
+        <h2>Selected Publications</h2>
+
+        <div class="publication">
+          <div class="publication-title">
+            Alpha-Frequency Stimulation Enhances Synchronization of Alpha Oscillations with Default Mode Network Connectivity
+          </div>
+          <div class="publication-authors">
+            <strong>Yijia Ma*</strong>, Joshua A Brown*, Chaowen Chen, Mingzhou Ding, Wei Wu, Wen Li
+          </div>
+          <div class="publication-venue">
+            <em>eNeuro</em>, 2025
+          </div>
+        </div>
+
+        <div class="publication">
+          <div class="publication-title">
+            Statistical Depth for Point Process via the Isometric Log-Ratio Transformation
+          </div>
+          <div class="publication-authors">
+            Xinyu Zhou, <strong>Yijia Ma</strong>, Wei Wu
+          </div>
+          <div class="publication-venue">
+            <em>Computational Statistics &amp; Data Analysis</em>, 2023
+          </div>
+        </div>
+
+        <div class="publication">
+          <div class="publication-title">
+            A Novel Point Process Model for Neuronal Spike Trains
+          </div>
+          <div class="publication-authors">
+            <strong>Yijia Ma</strong>, Wei Wu
+          </div>
+          <div class="publication-venue">
+            <em>Frontiers in Applied Mathematics and Statistics</em>, 2024
+          </div>
+        </div>
+      </section>
+
+      <p class="small-note">
+        Last updated: 2026
       </p>
 
-      <p>
-        This project develops principled constraints for EEG representation learning,
-        helping EEG models better capture signal structure and improve model generalization
-        for neural time-series analysis.
-      </p>
-
-      <div class="project-tools">
-        EEG, representation learning, neural time series, machine learning, model constraints
-      </div>
-
-      <p class="project-links">
-        <a href="https://y-research-sbu.github.io/JET">webpage</a> |
-        <span class="abstract-link" onclick="toggleAbstract('eeg-abstract')">abstract</span> |
-        <a href="https://arxiv.org/abs/2605.21280">paper</a> |
-        <a href="https://github.com/Y-Research-SBU/JET">code</a>
-      </p>
-
-      <div id="eeg-abstract" class="abstract-box">
-        <strong>Abstract.</strong>
-        High-fidelity EEG generation is critical for alleviating data scarcity and addressing privacy constraints in large-scale neural modeling. Despite recent progress, most existing approaches formulate EEG generation via discrete denoising objectives, which inadequately reflect the inherently continuous temporal dynamics and spectral structure of neural activity. As a result, these methods often struggle to preserve long-range temporal dependencies and exhibit mismatches in the spectral and temporal structure of the generated signals. In this work, we argue that effective EEG generation requires models that operate directly on the continuous evolution of neural signals. We introduce Just EEG Transformer (JET), a generative framework based on conditional flow matching that models EEG as raw sequences evolving along continuous trajectories. By learning a smooth vector field that transports noise to the EEG data distribution, JET captures temporal continuity and transient dynamics without relying on discretized denoising schemes or domain-specific representations. To ensure that the learned dynamics remain consistent with key properties of EEG signals, we introduce principled constraints that preserve spectral structure, temporal stationarity, and signal-level statistics. Across three large-scale benchmarks, JET consistently achieves state-of-the-art performance, reducing TS-FID by over 40% compared to strong baselines. Extensive analyses show that JET captures key structural properties of neural dynamics, providing a scalable and principled approach to EEG generation.
-      </div>
-    </div>
+    </main>
   </div>
-
-  <div class="project-row">
-    <img src="images/EJS_bayes.png" alt="A new framework for Bayesian function registration figure" class="project-image">
-
-    <div class="project-content">
-      <div class="project-title">
-        <a href="https://projecteuclid.org/journals/electronic-journal-of-statistics/volume-19/issue-1/A-new-framework-for-Bayesian-function-registration/10.1214/25-EJS2383.pdf">A new framework for Bayesian function registration</a>
-      </div>
-
-      <p>
-        <strong>Yijia Ma</strong>, Wei Wu<br>
-        <em>Electronic Journal of Statistics, 2025</em>
-      </p>
-
-      <p>
-      This project introduces a Bayesian function registration framework that places stochastic-process priors directly on time-warping functions, improving alignment accuracy, posterior inference, and uncertainty quantification for temporally misaligned functional data.      </p>
-
-      <div class="project-tools">
-        Bayesian Modeling, MCMC, Stochastic process, functional data analysis, Prior constraints
-      </div>
-
-      <p class="project-links">
-        <a href="https://yma2019.github.io/me/">webpage</a> |
-        <span class="abstract-link" onclick="toggleAbstract('bayesian-registration-abstract')">abstract</span> |
-        <a href="https://projecteuclid.org/journals/electronic-journal-of-statistics/volume-19/issue-1/A-new-framework-for-Bayesian-function-registration/10.1214/25-EJS2383.pdf">paper</a> |
-        <a href="https://github.com/YMa2019/multi-align">code</a>
-      </p>
-
-
-    <div id="bayesian-registration-abstract" class="abstract-box">
-      <strong>Abstract.</strong>
-      Function registration, also known as alignment, is a fundamental problem in functional data analysis. Classical registration methods, such as Fisher-Rao alignment, focus on estimating optimal time-warping functions between curves. Recent Bayesian approaches model time warping directly by combining a prior on warping functions with a classical registration criterion as the likelihood term. These Bayesian methods have shown improvements over classical approaches. However, existing prior models often rely on nonlinear approximations, which may introduce inaccuracy and computational inefficiency. To address these limitations, we propose a new Bayesian framework that uses a linear representation of time-warping functions, allowing flexible Gaussian or non-Gaussian stochastic-process priors. This approach avoids linearization approximation in time-warping computation and obtains posterior inference through conventional Markov Chain Monte Carlo methods. Through multiple simulation studies, we investigate how the choice of prior affects registration performance and demonstrate that the proposed framework outperforms previous methods. We also apply the method to a real dataset and obtain desirable alignment results.
-      </div>
-    </div>
-  </div>
-
-  <div class="project-row">
-    <img src="images/timewarp.png" alt="A stochastic process representation for time warping functions" class="project-image">
-
-    <div class="project-content">
-      <div class="project-title">
-        <a href="https://ani.stat.fsu.edu/~wwu/papers/MaCSDA2024.pdf">A stochastic process representation for time warping functions</a>
-      </div>
-
-      <p>
-        <strong>Yijia Ma</strong>, Xinyu Zhou, Wei Wu<br>
-        <em>Computational Statistics & Data Analysis, 2024</em>
-      </p>
-
-      <p>
-      This project develops a stochastic-process framework for modeling nonlinear time-warping functions, enabling flexible simulation, penalized functional alignment, uncertainty-aware phase-variation analysis, and outlier detection in complex temporal data.
-
-      <div class="project-tools">
-        Hilbert space, Stochastic process, functional data analysis, Penalized function registratio, Functional boxplot
-      </div>
-
-      <p class="project-links">
-        <a href="https://yma2019.github.io/me/">webpage</a> |
-        <span class="abstract-link" onclick="toggleAbstract('time-warping-abstract')">abstract</span> |
-        <a href="https://projecteuclid.org/journals/electronic-journal-of-statistics/volume-19/issue-1/A-new-framework-for-Bayesian-function-registration/10.1214/25-EJS2383.pdf">paper</a> |
-        <a href="https://github.com/YMa2019/warping">code</a>
-      </p>
-
-
-    <div id="time-warping-abstract" class="abstract-box">
-      <strong>Abstract.</strong> Time-warping functions provide a mathematical representation for measuring phase variability in functional data. Although recent studies have developed various approaches to estimate optimal warpings between functions, a principled, linear, and generative representation of time-warping functions remains under-explored because warping functions are nonlinear in the conventional L2 space. To address this problem, we define a new linear warping space and propose a stochastic-process representation to characterize time-warping functions. The key idea is to define an inner-product structure on the warping space, followed by a transformation that maps warping functions into a subspace of L2. Under certain constraints, this transformation is an isometric isomorphism. In the transformed space, L2 basis functions in a Hilbert space can be used to generate time-warping functions through different types of stochastic processes. The effectiveness of this representation is demonstrated by using it as a new penalty in penalized function registration, together with an efficient gradient method for minimizing the cost function. The proposed penalized method is illustrated through simulations that characterize nonuniform and correlated constraints in the time domain. This representation is also used to develop boxplots for warping functions, estimate templates, and identify warping outliers. Finally, the method is applied to a COVID-19 dataset to construct boxplots and identify states with outlying growth patterns.
-    </div>
-    </div>
-  </div>
-
-  <div class="project">
-  <div class="project-title">
-     <a href="https://www.kaggle.com/competitions/fsu-spring-22/overview">Customer Lifetime Value Prediction</a>
-  </div>
-
-  <p>
-    This project builds machine learning models to predict customer lifetime value from
-    large-scale customer records, supporting customer analytics, revenue forecasting,
-    and data-driven business decision-making.
-  </p>
-
-  <div class="project-tools">
-    Python, data cleaning, missing-value imputation, feature selection, Random Forest, XGBoost, LightGBM, hyperparameter tuning
-  </div>
-
-  <p class="project-links">
-    <span class="abstract-link" onclick="toggleAbstract('clv-abstract')">details</span>
-  </p>
-
-  <div id="clv-abstract" class="abstract-box">
-    <strong>Details.</strong>
-    Cleaned and imputed 75K+ customer records, performed feature selection using filter,
-    wrapper, and embedded strategies, and trained Random Forest, XGBoost, and LightGBM
-    models with systematic hyperparameter tuning, achieving RMSE = 56.59.
-  </div>
-</div>
-  
-
-  <h2>Selected Publications</h2>
-
-  <div class="publication">
-    <div class="publication-title">
-      Alpha-Frequency Stimulation Enhances Synchronization of Alpha Oscillations with Default Mode Network Connectivity
-    </div>
-    <div class="publication-authors">
-      <strong>Yijia Ma*</strong>, Joshua A Brown*, Chaowen Chen, Mingzhou Ding, Wei Wu, Wen Li
-    </div>
-    <div>
-      <em>eNeuro</em>, 2025
-    </div>
-  </div>
-
-  <div class="publication">
-    <div class="publication-title">
-      Statistical depth for point process via the isometric log-ratio transformation
-    </div>
-    <div class="publication-authors">
-      Xinyu Zhou, <strong>Yijia Ma</strong>, Wei Wu
-    </div>
-    <div>
-      <em>Computational Statistics & Data Analysis </em>, 2023
-    </div>
-  </div>
-
-  <div class="publication">
-    <div class="publication-title">
-      A novel point process model for neuronal spike trains
-    </div>
-    <div class="publication-authors">
-      <strong>Yijia Ma</strong>, Wei Wu
-    </div>
-    <div>
-      <em>Frontiers in Applied Mathematics and Statistics </em>, 2024
-    </div>
-  </div>
-
-  <p class="small-note">
-    Last updated: 2026
-  </p>
 
   <script>
     function toggleAbstract(id) {
@@ -488,5 +702,7 @@
 
 </body>
 </html>
+
+
 
 
