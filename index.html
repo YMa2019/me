@@ -440,7 +440,7 @@
         <h1>About me</h1>
 
         <div class="subtitle">
-          Data Scientist | Statistician | Machine Learning &amp; Biomedical Data Analytics
+          Data Scientist | Statistician | Machine Learning &amp; Data Analytics
         </div>
 
         <p>
@@ -557,43 +557,6 @@
         <h2>Selected Projects</h2>
 
         <div class="project-row">
-          <img src="images/eeg-models.svg" alt="Let EEG Models Learn EEG project figure" class="project-image">
-
-          <div class="project-content">
-            <div class="project-title">
-              <a href="https://arxiv.org/abs/2605.21280">Let EEG Models Learn EEG</a>
-            </div>
-
-            <div class="project-meta">
-              Yifan Wang, <strong>Yijia Ma</strong>, Wen Li, Chenyu You<br>
-              <em>ICML, 2026</em>
-            </div>
-
-            <p>
-              This project develops principled constraints for EEG representation learning,
-              helping EEG models better capture signal structure and improve model generalization
-              for neural time-series analysis.
-            </p>
-
-            <div class="project-tools">
-              EEG, representation learning, neural time series, machine learning, model constraints
-            </div>
-
-            <p class="project-links">
-              <a href="https://y-research-sbu.github.io/JET">webpage</a> |
-              <span class="abstract-link" onclick="toggleAbstract('eeg-abstract')">abstract</span> |
-              <a href="https://arxiv.org/abs/2605.21280">paper</a> |
-              <a href="https://github.com/Y-Research-SBU/JET">code</a>
-            </p>
-
-            <div id="eeg-abstract" class="abstract-box">
-              <strong>Abstract.</strong>
-              High-fidelity EEG generation is critical for alleviating data scarcity and addressing privacy constraints in large-scale neural modeling. Despite recent progress, most existing approaches formulate EEG generation via discrete denoising objectives, which inadequately reflect the inherently continuous temporal dynamics and spectral structure of neural activity. As a result, these methods often struggle to preserve long-range temporal dependencies and exhibit mismatches in the spectral and temporal structure of the generated signals. In this work, we argue that effective EEG generation requires models that operate directly on the continuous evolution of neural signals. We introduce Just EEG Transformer (JET), a generative framework based on conditional flow matching that models EEG as raw sequences evolving along continuous trajectories. By learning a smooth vector field that transports noise to the EEG data distribution, JET captures temporal continuity and transient dynamics without relying on discretized denoising schemes or domain-specific representations. To ensure that the learned dynamics remain consistent with key properties of EEG signals, we introduce principled constraints that preserve spectral structure, temporal stationarity, and signal-level statistics. Across three large-scale benchmarks, JET consistently achieves state-of-the-art performance, reducing TS-FID by over 40% compared to strong baselines. Extensive analyses show that JET captures key structural properties of neural dynamics, providing a scalable and principled approach to EEG generation.
-            </div>
-          </div>
-        </div>
-
-        <div class="project-row">
           <img src="images/EJS_bayes.png" alt="A new framework for Bayesian function registration figure" class="project-image">
 
           <div class="project-content">
@@ -687,6 +650,43 @@
             Cleaned and imputed 75K+ customer records, performed feature selection using filter,
             wrapper, and embedded strategies, and trained Random Forest, XGBoost, and LightGBM
             models with systematic hyperparameter tuning, achieving RMSE = 56.59.
+          </div>
+        </div>
+
+        <div class="project-row">
+          <img src="images/eeg-models.svg" alt="Let EEG Models Learn EEG project figure" class="project-image">
+
+          <div class="project-content">
+            <div class="project-title">
+              <a href="https://arxiv.org/abs/2605.21280">Let EEG Models Learn EEG</a>
+            </div>
+
+            <div class="project-meta">
+              Yifan Wang, <strong>Yijia Ma</strong>, Wen Li, Chenyu You<br>
+              <em>ICML, 2026</em>
+            </div>
+
+            <p>
+              This project develops principled constraints for EEG representation learning,
+              helping EEG models better capture signal structure and improve model generalization
+              for neural time-series analysis.
+            </p>
+
+            <div class="project-tools">
+              EEG, representation learning, neural time series, machine learning, model constraints
+            </div>
+
+            <p class="project-links">
+              <a href="https://y-research-sbu.github.io/JET">webpage</a> |
+              <span class="abstract-link" onclick="toggleAbstract('eeg-abstract')">abstract</span> |
+              <a href="https://arxiv.org/abs/2605.21280">paper</a> |
+              <a href="https://github.com/Y-Research-SBU/JET">code</a>
+            </p>
+
+            <div id="eeg-abstract" class="abstract-box">
+              <strong>Abstract.</strong>
+              High-fidelity EEG generation is critical for alleviating data scarcity and addressing privacy constraints in large-scale neural modeling. Despite recent progress, most existing approaches formulate EEG generation via discrete denoising objectives, which inadequately reflect the inherently continuous temporal dynamics and spectral structure of neural activity. As a result, these methods often struggle to preserve long-range temporal dependencies and exhibit mismatches in the spectral and temporal structure of the generated signals. In this work, we argue that effective EEG generation requires models that operate directly on the continuous evolution of neural signals. We introduce Just EEG Transformer (JET), a generative framework based on conditional flow matching that models EEG as raw sequences evolving along continuous trajectories. By learning a smooth vector field that transports noise to the EEG data distribution, JET captures temporal continuity and transient dynamics without relying on discretized denoising schemes or domain-specific representations. To ensure that the learned dynamics remain consistent with key properties of EEG signals, we introduce principled constraints that preserve spectral structure, temporal stationarity, and signal-level statistics. Across three large-scale benchmarks, JET consistently achieves state-of-the-art performance, reducing TS-FID by over 40% compared to strong baselines. Extensive analyses show that JET captures key structural properties of neural dynamics, providing a scalable and principled approach to EEG generation.
+            </div>
           </div>
         </div>
       </section>
