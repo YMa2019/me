@@ -35,19 +35,19 @@
       top: 0;
       z-index: 1000;
     }
-    
+
     .nav-name {
       font-weight: bold;
       font-size: 18px;
       color: #555;
     }
-    
+
     .nav-links {
       display: flex;
       align-items: center;
       gap: 32px;
     }
-    
+
     .nav-links a {
       color: #666;
       font-size: 17px;
@@ -104,11 +104,10 @@
       margin-bottom: 10px;
     }
 
-
     .sidebar-links {
       margin-top: 18px;
     }
-    
+
     .sidebar-row {
       display: flex;
       align-items: center;
@@ -117,16 +116,16 @@
       color: #444;
       font-size: 15px;
     }
-    
+
     a.sidebar-row {
       text-decoration: none;
     }
-    
+
     a.sidebar-row:hover {
       color: #0066cc;
       text-decoration: none;
     }
-    
+
     .sidebar-icon {
       width: 16px;
       height: 16px;
@@ -134,6 +133,10 @@
       flex-shrink: 0;
     }
 
+    /* Main content */
+    .content {
+      max-width: 850px;
+    }
 
     h1 {
       font-size: 34px;
@@ -159,35 +162,6 @@
       font-size: 19px;
       color: #555;
       margin-bottom: 20px;
-    }
-
-    .role-line {
-      font-size: 16px;
-      color: #555;
-      margin-top: 8px;
-      margin-bottom: 18px;
-    }
-
-    .button-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 18px 0 24px 0;
-    }
-
-    .button-links a {
-      display: inline-block;
-      padding: 6px 12px;
-      border: 1px solid #0066cc;
-      border-radius: 6px;
-      color: #0066cc;
-      font-weight: bold;
-    }
-
-    .button-links a:hover {
-      background-color: #0066cc;
-      color: white;
-      text-decoration: none;
     }
 
     .highlight-box {
@@ -287,10 +261,6 @@
       font-size: 15px;
     }
 
-    .project-simple {
-      margin-bottom: 35px;
-    }
-
     /* Publications */
     .publication {
       margin-bottom: 24px;
@@ -337,7 +307,7 @@
         flex-wrap: wrap;
         gap: 16px;
       }
-      
+
       .nav-links a {
         font-size: 15px;
       }
@@ -348,6 +318,10 @@
         margin-top: 25px;
       }
 
+      .sidebar {
+        position: static;
+      }
+
       .profile-photo {
         width: 150px;
         height: 150px;
@@ -355,6 +329,7 @@
 
       .project-row {
         flex-direction: column;
+        align-items: flex-start;
       }
 
       .project-image {
@@ -390,48 +365,49 @@
       <div class="sidebar-title">
         Data Scientist · Statistician
       </div>
-      
-      <div class="sidebar-links">
-      <div class="sidebar-row">
-        <svg class="sidebar-icon" viewBox="0 0 384 512">
-          <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 256a64 64 0 1 1 0-128a64 64 0 1 1 0 128z"/>
-        </svg>
-        <span>Houston, TX</span>
-      </div>
 
-      <div class="sidebar-item">
-        Open to Data Scientist, Senior Data Scientist, Statistician, Quantitative Analyst, and Applied Scientist roles
+      <div class="sidebar-links">
+
+        <div class="sidebar-row">
+          <svg class="sidebar-icon" viewBox="0 0 384 512">
+            <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 256a64 64 0 1 1 0-128a64 64 0 1 1 0 128z"/>
+          </svg>
+          <span>Houston, TX</span>
+        </div>
+
+        <div class="sidebar-item">
+          Open to Data Scientist, Senior Data Scientist, Statistician, Quantitative Analyst, and Applied Scientist roles
+        </div>
+
+        <a class="sidebar-row" href="files/YijiaMa_Quant_Resume_2026.pdf">
+          <svg class="sidebar-icon" viewBox="0 0 384 512">
+            <path d="M64 0C28.7 0 0 28.7 0 64v384c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64V160L224 0H64zm128 192V48l144 144H192z"/>
+          </svg>
+          <span>Resume</span>
+        </a>
+
+        <a class="sidebar-row" href="https://github.com/YMa2019">
+          <svg class="sidebar-icon" viewBox="0 0 496 512">
+            <path d="M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2c12.8 2.3 17.3-5.6 17.3-12.1c0-6.2-.3-40.4-.3-61.4c0 0-70 15-84.7-29.8c0 0-11.4-29.1-27.8-36.6c0 0-22.9-15.7 1.6-15.4c0 0 24.9 2 38.6 25.8c21.9 38.6 58.6 27.5 72.9 20.9c2.3-16 8.8-27.1 16-33.7c-55.9-6.2-112.3-14.3-112.3-110.5c0-27.5 7.6-41.3 23.6-58.9c-2.6-6.5-11.1-33.3 2.6-67.9c20.9-6.5 69 27 69 27c20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27c13.7 34.6 5.2 61.4 2.6 67.9c16 17.6 25.8 31.5 25.8 58.9c0 96.5-58.9 104.2-114.8 110.5c9.2 7.9 17 22.9 17 46.4c0 33.7-.3 75.4-.3 83.6c0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252C496 113.3 383.5 8 244.8 8z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+
+        <a class="sidebar-row" href="https://www.linkedin.com/in/cecelia-ma/">
+          <svg class="sidebar-icon" viewBox="0 0 448 512">
+            <path d="M100.3 448H7.4V148.9h92.9V448zM53.8 108.1C24.1 108.1 0 83.5 0 53.8S24.1 0 53.8 0s53.8 24.1 53.8 53.8s-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2c-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3c94 0 111.3 61.9 111.3 142.3V448z"/>
+          </svg>
+          <span>LinkedIn</span>
+        </a>
+
+        <a class="sidebar-row" href="https://scholar.google.com/citations?user=h1cmeZkAAAAJ">
+          <svg class="sidebar-icon" viewBox="0 0 640 512">
+            <path d="M320 32L0 192l320 160l320-160L320 32zm0 352L96 272v96c0 53 100.3 96 224 96s224-43 224-96v-96L320 384z"/>
+          </svg>
+          <span>Google Scholar</span>
+        </a>
+
       </div>
-    
-      <a class="sidebar-row" href="files/YijiaMa_Quant_Resume_2026.pdf">
-        <svg class="sidebar-icon" viewBox="0 0 384 512">
-          <path d="M64 0C28.7 0 0 28.7 0 64v384c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64V160L224 0H64zm128 192V48l144 144H192z"/>
-        </svg>
-        <span>Resume</span>
-      </a>
-    
-      <a class="sidebar-row" href="https://github.com/YMa2019">
-        <svg class="sidebar-icon" viewBox="0 0 496 512">
-          <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6c-3.3.3-5.6-1.3-5.6-3.6c0-2 2.3-3.6 5.2-3.6c3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9c2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9c.3 2 2.9 3.3 5.9 2.6c2.9-.7 4.9-2.6 4.6-4.6c-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2c12.8 2.3 17.3-5.6 17.3-12.1c0-6.2-.3-40.4-.3-61.4c0 0-70 15-84.7-29.8c0 0-11.4-29.1-27.8-36.6c0 0-22.9-15.7 1.6-15.4c0 0 24.9 2 38.6 25.8c21.9 38.6 58.6 27.5 72.9 20.9c2.3-16 8.8-27.1 16-33.7c-55.9-6.2-112.3-14.3-112.3-110.5c0-27.5 7.6-41.3 23.6-58.9c-2.6-6.5-11.1-33.3 2.6-67.9c20.9-6.5 69 27 69 27c20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27c13.7 34.6 5.2 61.4 2.6 67.9c16 17.6 25.8 31.5 25.8 58.9c0 96.5-58.9 104.2-114.8 110.5c9.2 7.9 17 22.9 17 46.4c0 33.7-.3 75.4-.3 83.6c0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252C496 113.3 383.5 8 244.8 8z"/>
-        </svg>
-        <span>GitHub</span>
-      </a>
-    
-      <a class="sidebar-row" href="https://www.linkedin.com/in/cecelia-ma/">
-        <svg class="sidebar-icon" viewBox="0 0 448 512">
-          <path d="M100.3 448H7.4V148.9h92.9V448zM53.8 108.1C24.1 108.1 0 83.5 0 53.8S24.1 0 53.8 0s53.8 24.1 53.8 53.8s-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2c-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3c94 0 111.3 61.9 111.3 142.3V448z"/>
-        </svg>
-        <span>LinkedIn</span>
-      </a>
-    
-      <a class="sidebar-row" href="https://scholar.google.com/citations?user=h1cmeZkAAAAJ">
-        <svg class="sidebar-icon" viewBox="0 0 640 512">
-          <path d="M320 32L0 192l320 160l320-160L320 32zm0 352L96 272v96c0 53 100.3 96 224 96s224-43 224-96v-96L320 384z"/>
-        </svg>
-        <span>Google Scholar</span>
-      </a>
-    
-    </div>
     </aside>
 
     <main class="content">
@@ -445,7 +421,7 @@
 
         <p>
           I am a statistician and data scientist with expertise in statistical modeling,
-          machine learning, high-dimensional data analysis, and biomedical/neuroscience data.
+          machine learning, high-dimensional data analysis, and applied data analytics.
           My work bridges rigorous statistical methodology with practical data science pipelines
           for complex temporal, functional, and multimodal datasets.
         </p>
@@ -453,7 +429,7 @@
         <div class="highlight-box">
           <strong>Core strengths:</strong>
           statistical modeling, machine learning, Bayesian modeling, functional data analysis,
-          time-series analysis, EEG/fMRI analytics, NLP, cross-validation, permutation testing,
+          time-series analysis, NLP, cross-validation, permutation testing,
           uncertainty quantification, and reproducible Python/MATLAB/R workflows.
         </div>
 
@@ -461,14 +437,14 @@
           I have experience developing end-to-end analytical pipelines, including data cleaning,
           feature engineering, statistical modeling, machine learning, model validation, and
           interpretation of results for scientific and business stakeholders. My background combines
-          a Ph.D. in Statistics with applied experience in healthcare/neuroscience analytics and
-          industry data science.
+          a Ph.D. in Statistics with applied experience in healthcare analytics, customer analytics,
+          and industry data science.
         </p>
 
         <p>
           I am particularly interested in roles involving predictive modeling, high-dimensional data,
-          experimentation, causal or statistical inference, biomedical data science, customer analytics,
-          risk modeling, and quantitative research.
+          experimentation, causal or statistical inference, customer analytics, risk modeling,
+          and quantitative research.
         </p>
       </section>
 
@@ -626,31 +602,34 @@
           </div>
         </div>
 
-        <div class="project-simple">
-          <img src="images/clv.png" alt="Customer Lifetime Value Prediction" class="project-image">
-          <div class="project-title">
-            <a href="https://www.kaggle.com/competitions/fsu-spring-22/overview">Customer Lifetime Value Prediction</a>
-          </div>
+        <div class="project-row">
+          <img src="images/clv.png" alt="Customer Lifetime Value Prediction project diagram" class="project-image">
 
-          <p>
-            This project builds machine learning models to predict customer lifetime value from
-            large-scale customer records, supporting customer analytics, revenue forecasting,
-            and data-driven business decision-making.
-          </p>
+          <div class="project-content">
+            <div class="project-title">
+              <a href="https://www.kaggle.com/competitions/fsu-spring-22/overview">Customer Lifetime Value Prediction</a>
+            </div>
 
-          <div class="project-tools">
-            Python, data cleaning, missing-value imputation, feature selection, Random Forest, XGBoost, LightGBM, hyperparameter tuning
-          </div>
+            <p>
+              This project builds machine learning models to predict customer lifetime value from
+              large-scale customer records, supporting customer analytics, revenue forecasting,
+              and data-driven business decision-making.
+            </p>
 
-          <p class="project-links">
-            <span class="abstract-link" onclick="toggleAbstract('clv-abstract')">details</span>
-          </p>
+            <div class="project-tools">
+              Python, data cleaning, missing-value imputation, feature selection, Random Forest, XGBoost, LightGBM, hyperparameter tuning
+            </div>
 
-          <div id="clv-abstract" class="abstract-box">
-            <strong>Details.</strong>
-            Cleaned and imputed 75K+ customer records, performed feature selection using filter,
-            wrapper, and embedded strategies, and trained Random Forest, XGBoost, and LightGBM
-            models with systematic hyperparameter tuning, achieving RMSE = 56.59.
+            <p class="project-links">
+              <span class="abstract-link" onclick="toggleAbstract('clv-abstract')">details</span>
+            </p>
+
+            <div id="clv-abstract" class="abstract-box">
+              <strong>Details.</strong>
+              Cleaned and imputed 75K+ customer records, performed feature selection using filter,
+              wrapper, and embedded strategies, and trained Random Forest, XGBoost, and LightGBM
+              models with systematic hyperparameter tuning, achieving RMSE = 56.59.
+            </div>
           </div>
         </div>
 
@@ -690,6 +669,7 @@
             </div>
           </div>
         </div>
+
       </section>
 
       <section id="publications">
@@ -753,7 +733,4 @@
 
 </body>
 </html>
-
-
-
 
