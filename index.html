@@ -634,6 +634,42 @@
         </div>
 
         <div class="project-row">
+          <img src="images/neurosonic.png" alt="NeuroSonic: Conditional Flow Matching for EEG-to-Speech Reconstruction" class="project-image">
+
+          <div class="project-content">
+            <div class="project-title">
+              <a href="https://arxiv.org/abs/2605.21280">NeuroSonic: Conditional Flow Matching for EEG-to-Speech Reconstruction</a>
+            </div>
+
+            <div class="project-meta">
+              Wenhao Gao, Yifan Wang, <strong>Yijia Ma</strong>, Carl Yang, Wen Li, Chenyu You<br>
+              <em>MICCAI, 2026</em>
+            </div>
+
+            <p>
+              This project develops principled constraints for EEG representation learning,
+              helping EEG models better capture signal structure and improve model generalization
+              for neural time-series analysis.
+            </p>
+
+            <div class="project-tools">
+              EEG, representation learning, neural time series, machine learning, model constraints
+            </div>
+
+            <p class="project-links">
+              <a href="https://y-research-sbu.github.io/JET">webpage</a> |
+              <span class="abstract-link" onclick="toggleAbstract('eeg-abstract')">abstract</span> |
+              <a href="https://arxiv.org/abs/2605.21280">paper</a> |
+              <a href="https://github.com/Y-Research-SBU/JET">code</a>
+            </p>
+
+            <div id="eeg-abstract" class="abstract-box">
+              <strong>Abstract.</strong>
+Reconstructing continuous speech from scalp electroencephalography (EEG) remains fundamentally challenging. EEG provides a weak, spatially diffuse, and highly variable measurement of distributed cortical activity, whereas speech is organized as a coherent acoustic trajectory with strong harmonic and temporal structure. The resulting mismatch makes waveform regression unstable and causes stochastic multi-step generation to be sensitive to artifact-dependent conditioning and subject variability. We introduce NeuroSonic, a conditional flow-matching framework for EEG-to-speech reconstruction. Instead of predicting waveforms directly or refining them through stochastic denoising, NeuroSonic learns a deterministic probability-flow velocity field that transports a noise-corrupted acoustic state toward clean speech under EEG conditioning. EEG and audio are embedded into a shared token space and processed by a time-conditioned gated Transformer that parameterizes the transport ordinary differential equation. This formulation models trajectory evolution explicitly while avoiding iterative stochastic sampling. We evaluate NeuroSonic on the CineBrain and EAV benchmarks under cross-subject evaluation. Across both datasets, the proposed method improves distributional realism, spectral fidelity, and perceptual quality over representative GAN-, diffusion-, and mean-flow baselines, with up to a 26.3\% gain in overall perceptual quality. The performance gap is most evident in artifact-heavy segments, where conditioning variability is strongest. These findings indicate that deterministic conditional transport provides a stable and effective formulation for EEG-driven speech reconstruction.            </div>
+          </div>
+        </div>
+
+        <div class="project-row">
           <img src="images/eeg-models.svg" alt="Let EEG Models Learn EEG project figure" class="project-image">
 
           <div class="project-content">
