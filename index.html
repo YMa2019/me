@@ -791,8 +791,20 @@
       </section>
 
       <p class="small-note">
-        Last updated: 2026
+        Last updated: <span id="updated-date"></span>
       </p>
+      
+      <script>
+        function updateDate() {
+          document.getElementById("updated-date").textContent =
+            new Date().toLocaleDateString("en-US", {
+              month: "long",
+              year: "numeric"
+            });
+        }
+      
+        updateDate();
+      </script>
 
     </main>
   </div>
